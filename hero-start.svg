@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 520">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a2540"/>
+      <stop offset="50%" style="stop-color:#0d3d6b"/>
+      <stop offset="100%" style="stop-color:#1a6b9a"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#009FDA;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#009FDA;stop-opacity:0"/>
+    </linearGradient>
+    <radialGradient id="radial1" cx="70%" cy="40%" r="50%">
+      <stop offset="0%" style="stop-color:#009FDA;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#009FDA;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1440" height="520" fill="url(#bg1)"/>
+  <circle cx="1100" cy="200" r="350" fill="url(#radial1)"/>
+  <!-- House silhouette right -->
+  <g transform="translate(850, 80)" opacity="0.12" fill="white">
+    <polygon points="200,0 400,160 0,160" />
+    <rect x="40" y="160" width="320" height="260"/>
+    <rect x="140" y="220" width="90" height="120" fill="#009FDA" opacity="0.5"/>
+    <rect x="50" y="200" width="70" height="70"/>
+    <rect x="280" y="200" width="70" height="70"/>
+  </g>
+  <!-- Energy bolt -->
+  <g transform="translate(920, 120)" opacity="0.2">
+    <polygon points="60,0 20,120 55,120 10,240 90,80 50,80 80,0" fill="#FFD700"/>
+  </g>
+  <!-- Decorative circles -->
+  <circle cx="200" cy="450" r="120" fill="none" stroke="#009FDA" stroke-width="1" opacity="0.12"/>
+  <circle cx="1350" cy="100" r="80" fill="none" stroke="#009FDA" stroke-width="1" opacity="0.1"/>
+  <!-- Wave bottom -->
+  <path d="M0,460 Q360,420 720,440 Q1080,460 1440,430 L1440,520 L0,520 Z" fill="#009FDA" opacity="0.08"/>
+  <!-- Text hint -->
+  <text x="80" y="200" font-family="Arial Black,sans-serif" font-size="72" font-weight="900" fill="white" opacity="0.08">A2A START</text>
+</svg>

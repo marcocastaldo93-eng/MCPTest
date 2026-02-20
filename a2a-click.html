@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A2A Click – Offerta luce e gas conveniente online | A2A Energia</title>
+  <meta name="description" content="Offerta A2A Click: energia 100% green a prezzo fisso per 12 mesi. Luce da 0,112 €/kWh e gas al prezzo più vantaggioso. Attiva online o via WhatsApp.">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-links">
+      <a href="#">Gruppo A2A</a>
+      <a href="#">Magazine</a>
+      <a href="#">Assistenza</a>
+    </div>
+    <div class="topbar-links">
+      <span>☎ 02 8088 8000</span>
+      <a href="#">Area Clienti</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="logo.svg" alt="A2A Energia" class="logo-svg">
+    </a>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-item active">Casa</a>
+      <a href="#" class="nav-item">Business</a>
+      <a href="#" class="nav-item">Condominio</a>
+      <a href="#" class="nav-item">Comuni e PA</a>
+      <a href="#" class="nav-item">Mobilità</a>
+      <a href="#" class="nav-item">Ambiente</a>
+    </nav>
+    <div class="header-right">
+      <button class="btn-accedi">Accedi</button>
+    </div>
+  </div>
+</header>
+
+<!-- PROMO BAR -->
+<div class="promo-bar">
+  <div class="promo-bar-inner">
+    <span style="font-size:14px;font-weight:700;cursor:pointer;" id="promo-toggle">
+      🎁 Hai un codice promozionale? <span style="color:var(--cyan);">Clicca qui →</span>
+    </span>
+    <div id="promo-form" style="display:none;gap:8px;" class="promo-input-wrap">
+      <input type="text" placeholder="Inserisci il codice...">
+      <button class="btn btn-primary btn-sm">Applica</button>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="offer-hero">
+  <img src="hero-click.svg" alt="A2A Click" class="offer-hero-bg">
+  <div class="offer-hero-overlay"></div>
+  <div class="offer-hero-content">
+    <span class="carousel-badge fade-up">Offerta Online</span>
+    <h1 class="fade-up-2">A2A Click</h1>
+    <p class="fade-up-3">Il freddo non riserva sorprese con l'offerta più conveniente online di A2A Energia. Blocca il prezzo di luce e gas per 12 mesi, con luce 100% green e il prezzo del gas ancora più basso.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;" class="fade-up-4">
+      <a href="#attiva" class="btn btn-primary btn-lg">Attiva online</a>
+      <a href="https://api.whatsapp.com/send?phone=393404643315" class="btn btn-whatsapp btn-lg">💬 WhatsApp</a>
+      <a href="#form" class="btn btn-white btn-lg">Fatti richiamare</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE TICKER -->
+<div class="price-ticker">
+  <div class="price-ticker-inner">
+    <div class="ticker-tabs">
+      <button class="ticker-tab active" onclick="switchTab(0)">⚡🔥 Luce + Gas</button>
+      <button class="ticker-tab" onclick="switchTab(1)">⚡ Solo Luce</button>
+      <button class="ticker-tab" onclick="switchTab(2)">🔥 Solo Gas</button>
+    </div>
+    <div id="tp0">
+      <div class="ticker-prices">
+        <div class="ticker-price-item">
+          <div class="ticker-label">Prezzo Luce Monoraria</div>
+          <div class="ticker-value">0,11200 <span>€/kWh</span></div>
+        </div>
+        <div class="ticker-price-item">
+          <div class="ticker-label">Prezzo Luce Fascia 1</div>
+          <div class="ticker-value">0,13120 <span>€/kWh</span></div>
+        </div>
+        <div class="ticker-price-item">
+          <div class="ticker-label">Prezzo Gas</div>
+          <div class="ticker-value">0,3700 <span>€/Smc</span></div>
+        </div>
+        <div class="ticker-price-item" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+          <a href="#attiva" class="btn btn-primary btn-sm">Attiva online</a>
+          <a href="https://api.whatsapp.com/send?phone=393404643315" class="btn btn-whatsapp btn-sm">WhatsApp</a>
+          <a href="#form" class="btn btn-outline btn-sm">Richiamata</a>
+        </div>
+      </div>
+      <p style="font-size:11px;color:var(--gray);padding:6px 24px 10px;border-top:1px solid var(--border);">Prezzi validi fino al 16/02/2026. IVA e imposte escluse.</p>
+    </div>
+    <div id="tp1" style="display:none;">
+      <div class="ticker-prices">
+        <div class="ticker-price-item">
+          <div class="ticker-label">Prezzo Luce Monoraria</div>
+          <div class="ticker-value">0,11200 <span>€/kWh</span></div>
+        </div>
+        <div class="ticker-price-item">
+          <div class="ticker-label">Prezzo Luce Fascia 1</div>
+          <div class="ticker-value">0,13120 <span>€/kWh</span></div>
+        </div>
+        <div class="ticker-price-item">
+          <div class="ticker-label">Prezzo Luce Fascia 23</div>
+          <div class="ticker-value">0,10300 <span>€/kWh</span></div>
+        </div>
+        <div class="ticker-price-item" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+          <a href="#attiva" class="btn btn-primary btn-sm">Attiva online</a>
+          <a href="https://api.whatsapp.com/send?phone=393404643315" class="btn btn-whatsapp btn-sm">WhatsApp</a>
+          <a href="#form" class="btn btn-outline btn-sm">Richiamata</a>
+        </div>
+      </div>
+      <p style="font-size:11px;color:var(--gray);padding:6px 24px 10px;border-top:1px solid var(--border);">Prezzo valido fino al 16/02/2026. IVA e imposte escluse.</p>
+    </div>
+    <div id="tp2" style="display:none;">
+      <div class="ticker-prices">
+        <div class="ticker-price-item">
+          <div class="ticker-label">Prezzo Gas</div>
+          <div class="ticker-value">0,3700 <span>€/Smc</span></div>
+        </div>
+        <div class="ticker-price-item">
+          <div class="ticker-label">Corrispettivo fisso</div>
+          <div class="ticker-value">114 <span>€/anno</span></div>
+        </div>
+        <div class="ticker-price-item">
+          <div class="ticker-label">Durata prezzo fisso</div>
+          <div class="ticker-value">12 <span>mesi</span></div>
+        </div>
+        <div class="ticker-price-item" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+          <a href="#attiva" class="btn btn-primary btn-sm">Attiva online</a>
+          <a href="https://api.whatsapp.com/send?phone=393404643315" class="btn btn-whatsapp btn-sm">WhatsApp</a>
+          <a href="#form" class="btn btn-outline btn-sm">Richiamata</a>
+        </div>
+      </div>
+      <p style="font-size:11px;color:var(--gray);padding:6px 24px 10px;border-top:1px solid var(--border);">Prezzo valido fino al 16/02/2026. IVA e imposte escluse.</p>
+    </div>
+  </div>
+</div>
+
+<!-- VANTAGGI + FORM -->
+<section class="offer-detail" id="attiva">
+  <div class="section-wrap">
+    <div class="offer-detail-grid">
+      <div class="scroll-reveal">
+        <h2 class="section-title">L'offerta più conveniente online</h2>
+        <p style="color:var(--gray);font-size:16px;margin-bottom:20px;">A2A Click è pensata per chi vuole il massimo della convenienza attivando tutto comodamente online o via WhatsApp.</p>
+        <div class="offer-benefits">
+          <div class="benefit-item">
+            <div class="benefit-icon">❄️</div>
+            <div>
+              <h4>Nessuna sorpresa sul prezzo</h4>
+              <p>Prezzo bloccato per 12 mesi sia per la luce che per il gas. Zero brutte sorprese in bolletta.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🌱</div>
+            <div>
+              <h4>Luce 100% da rinnovabili</h4>
+              <p>Energia elettrica certificata al 100% da fonti rinnovabili con Garanzia d'Origine europea.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">📱</div>
+            <div>
+              <h4>Attiva da smartphone</h4>
+              <p>Attivazione completamente digitale: online, via WhatsApp o tramite l'app A2A. Nessuna pratica cartacea.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">💰</div>
+            <div>
+              <h4>Gas al prezzo più basso</h4>
+              <p>L'offerta A2A Click propone il gas a un prezzo particolarmente vantaggioso rispetto al mercato.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🔄</div>
+            <div>
+              <h4>Cambio fornitore gratuito</h4>
+              <p>Il passaggio da un altro fornitore è gratuito e avviene in automatico, senza interruzioni.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-reveal">
+        <img src="hero-click.svg" alt="A2A Click" style="width:100%;height:240px;object-fit:cover;border-radius:20px;margin-bottom:24px;">
+        <div id="form" style="background:white;border:1.5px solid var(--border);border-radius:var(--radius-lg);padding:28px;">
+          <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Fatti richiamare</h3>
+          <p style="font-size:13px;color:var(--gray);margin-bottom:20px;">Inserisci i tuoi dati e ti richiamiamo gratuitamente.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
+            <div>
+              <label style="font-size:12px;font-weight:700;display:block;margin-bottom:4px;">Nome *</label>
+              <input type="text" placeholder="Mario" style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:14px;font-family:inherit;outline:none;">
+            </div>
+            <div>
+              <label style="font-size:12px;font-weight:700;display:block;margin-bottom:4px;">Cognome *</label>
+              <input type="text" placeholder="Rossi" style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:14px;font-family:inherit;outline:none;">
+            </div>
+          </div>
+          <div style="margin-bottom:12px;">
+            <label style="font-size:12px;font-weight:700;display:block;margin-bottom:4px;">Telefono *</label>
+            <input type="tel" placeholder="3XX XXX XXXX" style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:14px;font-family:inherit;outline:none;">
+          </div>
+          <div style="margin-bottom:12px;">
+            <label style="font-size:12px;font-weight:700;display:block;margin-bottom:4px;">Email</label>
+            <input type="email" placeholder="mario@email.it" style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:14px;font-family:inherit;outline:none;">
+          </div>
+          <div style="margin-bottom:12px;">
+            <label style="font-size:12px;font-weight:700;display:block;margin-bottom:4px;">Fornitura</label>
+            <select style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:14px;font-family:inherit;outline:none;background:white;">
+              <option>Luce + Gas (Dual)</option>
+              <option>Solo Luce</option>
+              <option>Solo Gas</option>
+            </select>
+          </div>
+          <div style="font-size:11px;color:var(--gray);margin-bottom:14px;">
+            <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;">
+              <input type="checkbox" style="margin-top:2px;flex-shrink:0;">
+              <span>Presa visione dell'<a href="#" style="color:var(--cyan);">informativa privacy</a>, autorizzo A2A Energia a inviarmi comunicazioni commerciali tramite modalità automatizzate e tradizionali.</span>
+            </label>
+          </div>
+          <button onclick="this.textContent='✓ Richiesta inviata!';this.style.background='#2ecc71';" style="width:100%;padding:14px;background:var(--cyan);color:white;border:none;border-radius:10px;font-size:16px;font-weight:800;cursor:pointer;font-family:inherit;transition:all 0.2s;">
+            Invia richiesta
+          </button>
+          <p style="font-size:11px;color:#aaa;text-align:center;margin-top:10px;">* Campi obbligatori. I tuoi dati non saranno ceduti a terzi.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CODICI OFFERTA -->
+<section style="padding:0 0 60px;">
+  <div class="section-wrap">
+    <div class="codice-box scroll-reveal">
+      <h3>📋 Codici Offerta Ufficiali A2A Click</h3>
+      <p style="font-size:13px;color:var(--gray);margin-bottom:20px;">Codici univoci presenti sul <a href="https://www.ilportaleofferte.it" style="color:var(--cyan);">Portale Offerte ARERA</a>.</p>
+      <div class="codice-row">
+        <span class="codice-label">Codice Offerta Luce Monoraria</span>
+        <span class="codice-value">000294ESFML01XXA2AClick260229769</span>
+      </div>
+      <div class="codice-row">
+        <span class="codice-label">Codice Offerta Luce Multioraria</span>
+        <span class="codice-value">000294ESFFL01XXA2AClick260229769</span>
+      </div>
+      <div class="codice-row">
+        <span class="codice-label">Codice Offerta Gas</span>
+        <span class="codice-value">000294GSFML01XXA2AClick260229770</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONFRONTO TARIFFE -->
+<section style="padding:72px 0;background:var(--light-gray);">
+  <div class="section-wrap">
+    <div class="section-header centered">
+      <h2 class="section-title">Confronta le opzioni</h2>
+      <p class="section-sub">Scegli la combinazione più adatta alle tue abitudini di consumo.</p>
+    </div>
+    <div style="overflow-x:auto;margin-top:40px;">
+      <table style="width:100%;border-collapse:separate;border-spacing:0;background:white;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md);">
+        <thead>
+          <tr style="background:var(--dark);color:white;">
+            <th style="padding:18px 20px;text-align:left;font-size:14px;font-family:inherit;">Caratteristica</th>
+            <th style="padding:18px 20px;text-align:center;font-size:14px;font-family:inherit;">Solo Luce</th>
+            <th style="padding:18px 20px;text-align:center;font-size:14px;background:var(--cyan);font-family:inherit;">Luce + Gas ⭐</th>
+            <th style="padding:18px 20px;text-align:center;font-size:14px;font-family:inherit;">Solo Gas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:15px 20px;font-size:14px;font-weight:600;">Prezzo luce (Monoraria)</td>
+            <td style="padding:15px 20px;text-align:center;color:var(--cyan);font-weight:700;">0,11200 €/kWh</td>
+            <td style="padding:15px 20px;text-align:center;color:var(--cyan);font-weight:700;background:#f0f9fd;">0,11200 €/kWh</td>
+            <td style="padding:15px 20px;text-align:center;color:var(--gray);">–</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);background:#fafafa;">
+            <td style="padding:15px 20px;font-size:14px;font-weight:600;">Prezzo luce (F1)</td>
+            <td style="padding:15px 20px;text-align:center;color:var(--cyan);font-weight:700;">0,13120 €/kWh</td>
+            <td style="padding:15px 20px;text-align:center;color:var(--cyan);font-weight:700;background:#f0f9fd;">0,13120 €/kWh</td>
+            <td style="padding:15px 20px;text-align:center;color:var(--gray);">–</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:15px 20px;font-size:14px;font-weight:600;">Prezzo luce (F23)</td>
+            <td style="padding:15px 20px;text-align:center;color:var(--cyan);font-weight:700;">0,10300 €/kWh</td>
+            <td style="padding:15px 20px;text-align:center;color:var(--cyan);font-weight:700;background:#f0f9fd;">0,10300 €/kWh</td>
+            <td style="padding:15px 20px;text-align:center;color:var(--gray);">–</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);background:#fafafa;">
+            <td style="padding:15px 20px;font-size:14px;font-weight:600;">Prezzo gas</td>
+            <td style="padding:15px 20px;text-align:center;color:var(--gray);">–</td>
+            <td style="padding:15px 20px;text-align:center;color:var(--cyan);font-weight:700;background:#f0f9fd;">0,3700 €/Smc</td>
+            <td style="padding:15px 20px;text-align:center;color:var(--cyan);font-weight:700;">0,3700 €/Smc</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:15px 20px;font-size:14px;font-weight:600;">Corrispettivo fisso</td>
+            <td style="padding:15px 20px;text-align:center;">114 €/anno</td>
+            <td style="padding:15px 20px;text-align:center;background:#f0f9fd;">114 €/anno</td>
+            <td style="padding:15px 20px;text-align:center;">114 €/anno</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);background:#fafafa;">
+            <td style="padding:15px 20px;font-size:14px;font-weight:600;">Durata prezzo fisso</td>
+            <td style="padding:15px 20px;text-align:center;">12 mesi</td>
+            <td style="padding:15px 20px;text-align:center;background:#f0f9fd;font-weight:700;">12 mesi</td>
+            <td style="padding:15px 20px;text-align:center;">12 mesi</td>
+          </tr>
+          <tr>
+            <td style="padding:15px 20px;font-size:14px;font-weight:600;">Energia 100% green</td>
+            <td style="padding:15px 20px;text-align:center;color:green;font-size:18px;">✓</td>
+            <td style="padding:15px 20px;text-align:center;color:green;font-size:18px;background:#f0f9fd;">✓</td>
+            <td style="padding:15px 20px;text-align:center;color:var(--gray);">–</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td style="padding:15px 20px;"></td>
+            <td style="padding:15px 20px;text-align:center;"><a href="#attiva" class="btn btn-outline btn-sm">Attiva</a></td>
+            <td style="padding:15px 20px;text-align:center;background:#f0f9fd;"><a href="#attiva" class="btn btn-primary btn-sm">Attiva →</a></td>
+            <td style="padding:15px 20px;text-align:center;"><a href="#attiva" class="btn btn-outline btn-sm">Attiva</a></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <p style="font-size:11px;color:#aaa;margin-top:14px;text-align:center;">Prezzi validi fino al 16/02/2026. IVA e imposte escluse. Offerta soggetta a disponibilità territoriale.</p>
+  </div>
+</section>
+
+<!-- COME ATTIVARE -->
+<section class="steps-section">
+  <div class="section-wrap">
+    <div class="section-header centered">
+      <h2 class="section-title">Come attivare A2A Click</h2>
+      <p class="section-sub">Online in pochi minuti, o con un messaggio WhatsApp. Semplicissimo.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="steps-line"></div>
+      <div class="step-item scroll-reveal">
+        <div class="step-num">1</div>
+        <h4>Scegli la fornitura</h4>
+        <p>Luce, Gas o entrambi. Scegli anche l'opzione Monoraria o Multioraria (F1/F23).</p>
+      </div>
+      <div class="step-item scroll-reveal">
+        <div class="step-num">2</div>
+        <h4>Inserisci i dati</h4>
+        <p>POD (luce) o PDR (gas) dalla bolletta attuale, documento d'identità e codice fiscale.</p>
+      </div>
+      <div class="step-item scroll-reveal">
+        <div class="step-num">3</div>
+        <h4>Firma digitale</h4>
+        <p>Contratto firmato digitalmente in un click. Nessuna stampa, nessun ufficio.</p>
+      </div>
+      <div class="step-item scroll-reveal">
+        <div class="step-num">4</div>
+        <h4>Tutto fatto!</h4>
+        <p>Il cambio avviene automaticamente. La fornitura non si interrompe mai.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px;">
+      <a href="https://api.whatsapp.com/send?phone=393404643315" class="btn btn-whatsapp btn-lg">💬 Preferisci il WhatsApp? Attiva da qui</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="section-wrap">
+    <div class="section-header centered">
+      <h2 class="section-title">Domande frequenti su A2A Click</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <div class="faq-q">Cosa significa "prezzo fisso per 12 mesi"?<span class="faq-chevron">▾</span></div>
+        <div class="faq-a">Il prezzo della componente energia (materia prima luce e gas) rimane invariato per 12 mesi dalla data di attivazione. Dopo i 12 mesi potrai rinnovare l'offerta o passare a un'altra tariffa A2A.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Posso attivare solo luce o solo gas?<span class="faq-chevron">▾</span></div>
+        <div class="faq-a">Sì. Puoi scegliere di attivare A2A Click solo per la luce, solo per il gas o per entrambe le forniture (offerta Dual). I prezzi mostrati si applicano a ciascuna fornitura separatamente.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Cos'è la tariffa Monoraria e Multioraria?<span class="faq-chevron">▾</span></div>
+        <div class="faq-a">La Monoraria applica lo stesso prezzo (0,11200 €/kWh) in ogni ora del giorno. La Multioraria distingue tra ore di punta F1 (lun-ven 8-19) e ore fuori punta F23 (notti e weekend). Se consumi prevalentemente la sera e nel weekend, la Multioraria può essere conveniente.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">È possibile attivare solo via WhatsApp?<span class="faq-chevron">▾</span></div>
+        <div class="faq-a">Sì. A2A Click si può attivare integralmente via WhatsApp al numero +39 340 464 3315. Un consulente ti guiderà passo passo nella raccolta dei dati e nella firma del contratto digitale.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Il corrispettivo fisso di 114€/anno cosa comprende?<span class="faq-chevron">▾</span></div>
+        <div class="faq-a">Il corrispettivo fisso annuo di 114 € (IVA esclusa) è la quota fissa della componente di vendita dell'energia, indipendente dai consumi. Si aggiunge al costo variabile per kWh e viene distribuito nelle bollette in proporzione alla periodicità di fatturazione.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="section-wrap">
+    <h2>Inizia a risparmiare oggi</h2>
+    <p>Attiva A2A Click online in meno di 10 minuti. Zero carte, zero attese.</p>
+    <div class="cta-buttons">
+      <a href="#attiva" class="btn btn-white btn-lg">Attiva online →</a>
+      <a href="https://api.whatsapp.com/send?phone=393404643315" class="btn btn-whatsapp btn-lg">💬 WhatsApp</a>
+      <a href="#form" class="btn btn-lg" style="border:2px solid white;color:white;">📞 Fatti richiamare</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="margin-bottom:4px;">
+          <img src="logo.svg" alt="A2A Energia" style="width:40px;height:40px;">
+          <span class="logo-name">A2A <span>Energia</span></span>
+        </a>
+        <p>A2A Energia S.p.A. – C.F./P.I. 12883420155</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn">f</a>
+          <a href="#" class="social-btn">𝕏</a>
+          <a href="#" class="social-btn">in</a>
+          <a href="#" class="social-btn">▶</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Offerte Casa</h5>
+        <a href="a2a-start.html">A2A Start</a>
+        <a href="a2a-click.html">A2A Click</a>
+        <a href="#">A2A Full</a>
+        <a href="#">Smart Casa</a>
+        <a href="#">Noi2</a>
+      </div>
+      <div class="footer-col">
+        <h5>Assistenza</h5>
+        <a href="#">Area Clienti</a>
+        <a href="#">App A2A</a>
+        <a href="#">FAQ</a>
+        <a href="#">Contatti</a>
+      </div>
+      <div class="footer-col">
+        <h5>A2A Energia</h5>
+        <a href="#">Chi siamo</a>
+        <a href="#">Sostenibilità</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 A2A Energia S.p.A. Prezzi validi al 16/02/2026. IVA esclusa.</span>
+      <div><a href="#">Privacy</a><a href="#">Cookie</a><a href="#">Note legali</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+  document.getElementById('promo-toggle').addEventListener('click', function() {
+    var f = document.getElementById('promo-form');
+    f.style.display = f.style.display === 'none' ? 'flex' : 'none';
+  });
+  function switchTab(i) {
+    document.querySelectorAll('.ticker-tab').forEach(function(t,j){ t.classList.toggle('active', i===j); });
+    ['tp0','tp1','tp2'].forEach(function(id,j){ document.getElementById(id).style.display = i===j ? 'block' : 'none'; });
+  }
+</script>
+</body>
+</html>

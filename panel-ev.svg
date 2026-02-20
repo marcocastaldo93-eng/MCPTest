@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360">
+  <defs>
+    <linearGradient id="evbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8F5E9"/>
+      <stop offset="100%" style="stop-color:#C8E6C9"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#evbg)"/>
+  <!-- Road -->
+  <rect x="0" y="240" width="600" height="120" fill="#546E7A"/>
+  <rect x="0" y="238" width="600" height="6" fill="#FFD700" opacity="0.5"/>
+  <g fill="white" opacity="0.5">
+    <rect x="60" y="270" width="80" height="10" rx="5"/>
+    <rect x="200" y="270" width="80" height="10" rx="5"/>
+    <rect x="340" y="270" width="80" height="10" rx="5"/>
+    <rect x="480" y="270" width="80" height="10" rx="5"/>
+  </g>
+  <!-- Electric car -->
+  <g transform="translate(150, 160)">
+    <rect x="0" y="30" width="280" height="80" rx="14" fill="#009FDA"/>
+    <rect x="30" y="10" width="210" height="75" rx="12" fill="#1976D2"/>
+    <!-- Windows -->
+    <rect x="40" y="18" width="80" height="55" rx="6" fill="#B3E5FC" opacity="0.85"/>
+    <rect x="130" y="18" width="100" height="55" rx="6" fill="#B3E5FC" opacity="0.85"/>
+    <!-- Wheels -->
+    <circle cx="55" cy="110" r="28" fill="#1C2B39"/>
+    <circle cx="55" cy="110" r="16" fill="#607D8B"/>
+    <circle cx="55" cy="110" r="7" fill="#90A4AE"/>
+    <circle cx="225" cy="110" r="28" fill="#1C2B39"/>
+    <circle cx="225" cy="110" r="16" fill="#607D8B"/>
+    <circle cx="225" cy="110" r="7" fill="#90A4AE"/>
+    <!-- Charging plug indicator -->
+    <rect x="265" y="55" width="20" height="30" rx="4" fill="#FFD700"/>
+    <!-- Lights -->
+    <rect x="255" y="38" width="20" height="12" rx="3" fill="#FFF9C4" opacity="0.9"/>
+    <rect x="5" y="38" width="20" height="12" rx="3" fill="#FF5252" opacity="0.8"/>
+    <!-- Energy bolt -->
+    <text x="110" y="72" font-family="Arial Black,sans-serif" font-size="28" font-weight="900" fill="white" opacity="0.9">⚡</text>
+  </g>
+  <!-- Charging station -->
+  <g transform="translate(480,120)">
+    <rect x="0" y="0" width="50" height="130" rx="8" fill="#37474F"/>
+    <rect x="8" y="15" width="34" height="55" rx="4" fill="#009FDA" opacity="0.8"/>
+    <text x="25" y="50" font-family="Arial Black,sans-serif" font-size="22" font-weight="900" fill="white" text-anchor="middle">⚡</text>
+    <rect x="15" y="80" width="20" height="8" rx="4" fill="#4CAF50"/>
+    <line x1="50" y1="80" x2="480" y2="205" stroke="#FFD700" stroke-width="3" stroke-dasharray="8 4" opacity="0.6"/>
+  </g>
+</svg>
